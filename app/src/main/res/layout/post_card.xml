@@ -1,188 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="400dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/back"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
+
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewmenu"
             app:srcCompat="@drawable/btpitlogo" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="25dp"
-            android:gravity="start"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:id="@+id/textViewHeader"
+                android:layout_width="131dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:text="ГБПОУ ВО &quot;БТПИТ&quot;"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="72dp"
                 tools:layout_editor_absoluteY="6dp" />
+            <EditText android:id="@+id/editTextHeader"
+                android:layout_width="131dp"
+                android:layout_height="20dp"
+                android:textSize="20sp"
+                android:hint="Введите текст заголовка"
+                android:visibility="invisible"
+                android:layout_marginStart="10dp"
+                android:text="@string/header_post"/>
+
 
             <TextView
-                android:id="@+id/dateTime"
+                android:id="@+id/textViewDateTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:text="20 февраля в 17:18"
                 app:layout_constraintTop_toTopOf="@+id/textViewHeader"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="72dp" />
 
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:gravity="center_horizontal|end"
-            android:hapticFeedbackEnabled="false"
-            android:isScrollContainer="true"
-            android:keepScreenOn="false"
-            android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/imageViewmenu"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/tochki" />
 
-            <ImageButton
-                android:id="@+id/menu"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/tochki"
-                android:clickable="true" />
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/Content"
+        android:id="@+id/textViewContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/back"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
         android:text="✅ Подать заявление на участие в дистанционном электронном голосовании до 11 марта 2024 года
 ✅ Выбрать удобный избирательный участок для голосования и подать заявление до 11 марта 2024 года
-✅ Узнайте о возможностях для избирателей на «Госуслугах»"
-        android:textAlignment="textStart" />
+✅ Узнайте о возможностях для избирателей на «Госуслугах»" />
+    <EditText android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="15sp"
+        android:hint="@string/write_content"
+        android:text="@string/content_post"
+        android:layout_marginHorizontal="5dp"
+        android:padding="10dp"/>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="-1dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/back"
+        android:layout_height="61dp"
         android:gravity="center_vertical">
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/like1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/ic_like_24dp"
-            android:contentDescription="like"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/footer"
-            />
-
-        <androidx.constraintlayout.widget.Barrier android:id="@+id/footer"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="content"/>
-
-        <!--<ImageButton
-            android:id="@+id/likeButton"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:adjustViewBounds="false"
-            android:background="@drawable/likeoff"
-            android:clickable="true"
-            android:cropToPadding="false"
-            android:scaleX="1"
-            android:scaleY="1">
-        </ImageButton>-->
-
-        <TextView
-            android:id="@+id/like"
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:text="0"></TextView>
-
         <ImageButton
-            android:id="@+id/repostButton"
-            android:layout_width="25dp"
+            android:id="@+id/imagebutnlike"
+            android:layout_width="30dp"
             android:layout_height="25dp"
-            android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:background="@drawable/repost"
-            android:clickable="true">
+            android:background="@drawable/likes">
 
         </ImageButton>
 
         <TextView
-            android:id="@+id/repost"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewLike"
+            android:layout_width="60dp"
             android:layout_height="18dp"
-            android:text="0"></TextView>
+            android:text="0">
+        </TextView>
+        <ImageButton
+            android:id="@+id/imagebutnRepost"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/repost">
 
-        <LinearLayout
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/textViewRepost"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:text="0">
+        </TextView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="95dp"
+            app:srcCompat="@android:drawable/ic_menu_view">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="4dp"
+            android:text="5"
+            android:id="@+id/textViewGlaza">
+        </TextView>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintEdit"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center|end"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                app:srcCompat="@drawable/view"></ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="18dp"
-                android:layout_gravity="center|right"
-                android:layout_marginEnd="5dp"
-                android:text="500"></TextView>
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayoutLikeShareSees"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent="0.5">
 
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/back"
-        android:orientation="horizontal">
+            <Button android:id="@+id/buttonSave"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="Сохранить"
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </LinearLayout>
-
 </LinearLayout>

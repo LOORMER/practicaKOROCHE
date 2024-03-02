@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">prack_1</string>
+    <string name="app_name">Как я вижу это</string>
+    <string name="n_hello_world">Тут написано:\nМы студенты БТПИТ! вместо Hello, World</string>
+    <string name="happened_next">А вот что было дальше Мы с вами сейчас и узнаем</string>
+    <string name="content_post">Контент текст</string>
+    <string name="header_post">ОНИ ВЕРНУЛИСЬ!!!</string>
+    <string name="dataTime_post">Только что</string>
+    <string name="more_billion">более млрд</string>
+    <string name="delete">Удалить</string>
+    <string name="todo">TODO</string>
+    <string name="edit">Редактировать</string>
+    <string name="add_link">Добавьте ссылку</string>
+    <string name="write_content">Впишите основной контент</string>
 </resources>

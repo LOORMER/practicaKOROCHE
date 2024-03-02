@@ -13,40 +13,8 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/post_card" />
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="start"
-        app:constraint_referenced_ids="editContent,SAVE" />
-
-    <EditText
-        android:id="@+id/editContent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@drawable/back"
-        android:hint="Введите текст"
-        android:importantForAutofill="no"
-        android:inputType="textMultiLine" />
-
-    <ImageButton
-        android:id="@+id/SAVE"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_gravity="bottom|end"
-        android:background="@drawable/send"
-        android:clickable="true" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/fab"
-        app:srcCompat="@drawable/ic_add_24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="Добавить пост"
-        android:layout_margin="@dimen/fab_margin"/>
 
 </FrameLayout>
+
 
 

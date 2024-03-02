@@ -1,14 +1,16 @@
 package ru.btpit.nmedia
 
+import java.util.Date
+
 data class Post (
-    val id:Long,
+    var id:Int,
     val header:String,
     val content: String,
-    val dataTime:String,
+    val dataTime:Date,
     var amountlike:Int,
     var amountrepost:Int,
-    val amountviews: Int,
     var isLike:Boolean,
+    var amountglaza: Int,
     var isRepos:Boolean
 )
 

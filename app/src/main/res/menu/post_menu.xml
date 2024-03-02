@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/remove" android:title="remove"></item>
-    <item  android:id="@+id/edit" android:title="Редактикровать"/>
+<item android:id="@+id/remove" android:title="Удалить"></item>
+    <item android:id="@+id/edit" android:title="Изменить"></item>
+    <item android:id="@+id/add" android:title="Добавить"></item>
 </menu>
